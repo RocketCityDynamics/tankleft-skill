@@ -26,10 +26,10 @@ class Tankleft(MycroftSkill):
         # Compensate with slightly more juice going to the weaker motor to help it drive straighter.
 
         #Below is from Backwards function to spin inside motor backwards, bit like an e-brake."
+        GPIO.output(in1,GPIO.LOW)
+        GPIO.output(in2,GPIO.HIGH)
         GPIO.output(in3,GPIO.LOW)
         GPIO.output(in4,GPIO.HIGH)
-        GPIO.output(in1,GPIO.HIGH)
-        GPIO.output(in2,GPIO.LOW)
         
         time.sleep(3) #This finally worked.
         
